@@ -1,0 +1,16 @@
+.error_not_found {
+    margin: 6rem 0;
+    color: black;
+    text-align: center;
+}
+
+.error_not_found .fa-search {
+    color: #ff6600;
+    font-size: 3rem;
+    padding: 1.5rem;
+    border-radius: 50%;
+}
+
+.error_not_found p {
+    color: gray;
+}

@@ -140,11 +140,15 @@ if (isset($_POST["post"])) {
                            </div>
                            <!--== Start Reviews Form Item ==-->
 
+
+                     
+
+
                                <div class="reviews-form-area">
                                     <?php
                                     $loggedin=$_SESSION['user_loggedin']?? null;
                                     if(!$loggedin) {?>
-                                   <div class=" h3 my-4">You need to sign in as a user in order to write a review</div> <?php }?>
+                                   <div class=" h4 review-write-btn my-4">You need to sign in as a user in order to write a review</div> <?php }?>
                                    <?php if(isset($_SESSION['user_id'])) {
 
                                    if($loggedin){?>
@@ -181,9 +185,8 @@ if (isset($_POST["post"])) {
                             if(isset($review)){
                              foreach ($review as $key) {?>
                               <div class="review-item">
-                                  <h3><i class="fa fa-user m-3"></i><?php echo $key['username']?></h3>
-                                  <small class="text-muted"><?php echo $key["date_created"] ?></small>
-                                 <h3 class="title"><span class="font-weight-900">title:</span>  <?php echo $key["review_title"]  ?></h3>
+                              <h3 class="title"> <?php echo $key["review_title"]  ?></h3>
+                              <h5 class="sub-title"><span><?php echo $key['username']?></span> no <span><?php echo $key["date_created"] ?></span></h5>
                                  <p><?php echo $key["review_comments"]  ?> </p>
                               </div>
                               <?php }} ?>
